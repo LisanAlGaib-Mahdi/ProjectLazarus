@@ -1,66 +1,96 @@
-💻 Purpose of Use & REQUIRED PROGRAMS AND LIBRARIES
-The purpose of the application is to automatically pull champions to the bench from the shop by performing the number of searches you specify for the champions you enter.
-I have tested the application many times and have not encountered any missed bench placements. Very rarely, if your champion becomes 3-starred, there might be a chance it is not matched due to animations, but this is a very low probability.
+# 💻 Purpose of Use & Required Programs and Libraries
 
-I made it for myself so it uses Turkish client's champion templates(shop images of champions). So if you want use it on English client make sure you get all champions template on english client. Should be as soon as close to my templates size.
-Make sure to install the latest version of Python.
-The script looks for a window with the title containing “League of Legends”.
-Make sure the game is running in windowed mode.
-The bot scans the shop area by taking a screenshot. Your screen resolution must be 1920x1080, and the window position must remain unchanged.
-Run as administrator if you get problems.
+The purpose of this application is to **automatically pull champions to the bench from the shop** by performing a specified number of searches for the champions you input.
 
-1. Python Packages (installed via pip)
-The required Python libraries are listed in the requirements.txt file and can be installed via the terminal using the following command:
+- The application has been tested extensively and rarely misses bench placements.
+- In very rare cases, if your champion is **upgraded to 3-star**, there may be a minor chance of mismatch due to animations—though this is highly unlikely.
 
+> ⚠️ This project was created for personal use with the **Turkish client**, so champion template images are based on the Turkish version of the game.  
+> If you're using the **English client**, you must provide the appropriate champion template images in English. Ensure these images closely match the size and resolution of the original Turkish ones.
+
+### ⚙️ System Requirements
+
+- Install the **latest version of Python**.
+- The game must be running in **windowed mode**.
+- Your screen resolution must be **1920x1080**.
+- The **window position must remain unchanged** during operation.
+- Run the script as **Administrator** if you encounter any issues.
+- The script looks for a window with a title containing **"League of Legends"**.
+
+---
+
+## 📦 1. Python Packages
+
+Install all required packages listed in `requirements.txt` using:
+
+```bash
 pip install -r requirements.txt
+```
 
-Required Python Packages:
-- PyQt5
-- opencv-python
-- pytesseract
-- numpy
-- pyautogui
-- keyboard
-- pygetwindow
-- Pillow
+### Required Libraries:
 
-2. Tesseract OCR (Required for reading text from images)
-Purpose: Provides OCR support to analyze and compare champion images.
+- `PyQt5`
+- `opencv-python`
+- `pytesseract`
+- `numpy`
+- `pyautogui`
+- `keyboard`
+- `pygetwindow`
+- `Pillow`
 
-Download Links:
-- GitHub: https://github.com/tesseract-ocr/tesseract
-- Or directly for Windows: https://github.com/UB-Mannheim/tesseract/wiki
+---
 
-Install it to the default installation path.
-In the code, it is defined as follows:
+## 🧠 2. Tesseract OCR
 
+Used for **text recognition** in champion images.
+
+### 🔗 Download Links:
+- GitHub: [https://github.com/tesseract-ocr/tesseract](https://github.com/tesseract-ocr/tesseract)
+- Windows Installer: [https://github.com/UB-Mannheim/tesseract/wiki](https://github.com/UB-Mannheim/tesseract/wiki)
+
+### 📍 Installation Path
+
+Install it in the default path:
+```bash
 C:\Users\Administrator\AppData\Local\Programs\Tesseract-OCR\tesseract.exe
+```
 
-Make sure it is installed in this folder. If you installed it elsewhere, update this line in the code accordingly:
-
+If installed elsewhere, update this line in the code:
+```python
 pytesseract.pytesseract.tesseract_cmd = r"YOUR\NEW\TESSERACT\PATH\tesseract.exe"
+```
 
-3. Champion Template Images
-Folder: champions_templates
+---
 
-Description: This folder should contain champion images in .png format. For example:
+## 🖼️ 3. Champion Template Images
 
+Folder: `champions_templates/`  
+These `.png` files are used to **match champions in the in-game shop**.
+
+> File names **must match** the champion names you input into the program.
+
+### Example:
+```
 champions_templates/
 ├── yasuo.png
 ├── aatrox.png
 └── vex.png
+```
 
-These images are used to match the champions shown in the in-game shop.
-The file names must match the names of the champions you input into the program.
+---
 
-🖱️ HOTKEYS
-- Start Bot: Ctrl + 1
-- Pause / Resume Bot: Ctrl + 2
-- Stop Bot: Ctrl + 3
-- Show / Hide UI: Insert
+## 🖱️ Hotkeys
 
-📁 SAMPLE FILE STRUCTURE
+- **Start Bot**: `Ctrl + 1`  
+- **Pause / Resume Bot**: `Ctrl + 2`  
+- **Stop Bot**: `Ctrl + 3`  
+- **Show / Hide UI**: `Insert`
 
+---
+
+## 📁 Sample Project Structure
+
+```
 project_folder/
 ├── lazarus.py
 ├── requirements.txt
@@ -69,3 +99,4 @@ project_folder/
     ├── yasuo.png
     ├── vex.png
     └── aatrox.png
+```
