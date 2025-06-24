@@ -14,8 +14,8 @@ The purpose of this application is to **automatically pull champions to the benc
 - The game must be running in **windowed mode**.
 - Your screen resolution must be **1920x1080**.
 - The **window position must remain unchanged** during operation.
-- Run the script as **Administrator** if you encounter any issues.
-- The script looks for a window with a title containing **"League of Legends"**.
+- Run the program as **Administrator** if you encounter any issues.
+- The program looks for a window with a title containing **"League of Legends"**.
 
 ---
 
