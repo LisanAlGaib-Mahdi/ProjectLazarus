@@ -9,8 +9,6 @@ Make sure the game is running in windowed mode.
 The bot scans the shop area by taking a screenshot. Your screen resolution must be 1920x1080, and the window position must remain unchanged.
 Run as administrator if you get problems.
 
-
-
 1. Python Packages (installed via pip)
 The required Python libraries are listed in the requirements.txt file and can be installed via the terminal using the following command:
 
@@ -25,8 +23,6 @@ Required Python Packages:
 - keyboard
 - pygetwindow
 - Pillow
-
-
 
 2. Tesseract OCR (Required for reading text from images)
 Purpose: Provides OCR support to analyze and compare champion images.
@@ -44,8 +40,6 @@ Make sure it is installed in this folder. If you installed it elsewhere, update 
 
 pytesseract.pytesseract.tesseract_cmd = r"YOUR\NEW\TESSERACT\PATH\tesseract.exe"
 
-
-
 3. Champion Template Images
 Folder: champions_templates
 
@@ -59,15 +53,11 @@ champions_templates/
 These images are used to match the champions shown in the in-game shop.
 The file names must match the names of the champions you input into the program.
 
-
-
 🖱️ HOTKEYS
 - Start Bot: Ctrl + 1
 - Pause / Resume Bot: Ctrl + 2
 - Stop Bot: Ctrl + 3
 - Show / Hide UI: Insert
-
-
 
 📁 SAMPLE FILE STRUCTURE
 
