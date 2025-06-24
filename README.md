@@ -17,6 +17,8 @@ The purpose of this application is to **automatically pull champions to the benc
 - Run the program as **Administrator** if you encounter any issues.
 - The program looks for a window with a title containing **"League of Legends"**.
 
+[![Watch the video](https://img.youtube.com/vi/vfc3WKMCgDM/maxresdefault.jpg)](https://www.youtube.com/watch?v=vfc3WKMCgDM)
+
 ---
 
 ## 📦 1. Python Packages
